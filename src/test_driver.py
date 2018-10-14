@@ -2,20 +2,11 @@
 
 import sys
 
-from data_injester import DataInjester
-from pro_data_handler import ProDataHandler
+from twt_adapter import TwtStreamer 
 
 def main():
-    line = injester.get_line()
-    while line != "":
-        if prof.has_profane(line):
-            print "PRO"
-        line = injester.get_line()
-        #print line
+    twt_l.start_streaming()
 
 if __name__ == "__main__":
-    DATA_FILE = "../data/sample.txt"
-    PRO_FILE = "../data/prof.txt"
-    injester = DataInjester(DATA_FILE)
-    prof = ProDataHandler(PRO_FILE)
+    twt_l = TwtStreamer()
     sys.exit(main())
